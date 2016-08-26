@@ -124,7 +124,7 @@
 	    '/index': {
 	        name: 'index', //index
 	        component: function component(resolve) {
-	            !/* require */(/* empty */function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(36)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.call(this));
+	            !/* require */(/* empty */function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(37)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.call(this));
 	        }
 	    },
 	    '/view/*any': {
@@ -136,7 +136,7 @@
 	    '/codelist': {
 	        name: 'codelist', //详情
 	        component: function component(resolve) {
-	            __webpack_require__.e/* require */(1, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(42)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
+	            __webpack_require__.e/* require */(1, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(43)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	        }
 	    }
 	});
@@ -13118,7 +13118,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/main.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(41)
+	__vue_template__ = __webpack_require__(42)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14117,8 +14117,8 @@
 		"./api/api.getlist.js": 29,
 		"./config/config.api": 10,
 		"./config/config.api.js": 10,
-		"./config/config.code": 47,
-		"./config/config.code.js": 47,
+		"./config/config.code": 30,
+		"./config/config.code.js": 30,
 		"./config/config.main": 20,
 		"./config/config.main.js": 20,
 		"./libs/http": 19,
@@ -14127,8 +14127,8 @@
 		"./libs/request.js": 18,
 		"./main.vue": 4,
 		"./view/apiView.vue": 11,
-		"./view/codeList.vue": 31,
-		"./view/index.vue": 36,
+		"./view/codeList.vue": 32,
+		"./view/index.vue": 37,
 		"./view/leftView.vue": 22
 	};
 	function webpackContext(req) {
@@ -14219,18 +14219,33 @@
 	};
 
 /***/ },
-/* 30 */,
-/* 31 */
+/* 30 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    10001: '未登陆',
+	    10002: '登陆态过期',
+	    10003: '账号被锁定'
+	};
+
+/***/ },
+/* 31 */,
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(48)
-	__vue_script__ = __webpack_require__(34)
+	__webpack_require__(33)
+	__vue_script__ = __webpack_require__(35)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/view/codeList.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(35)
+	__vue_template__ = __webpack_require__(36)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -14249,123 +14264,13 @@
 	})()}
 
 /***/ },
-/* 32 */,
-/* 33 */,
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _configCode = __webpack_require__(47);
-
-	var _configCode2 = _interopRequireDefault(_configCode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	    name: 'codelist',
-	    data: function data() {
-	        return {
-	            items: _configCode2.default
-	        };
-	    }
-	};
-
-/***/ },
-/* 35 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"code_wrap\">\n    <table class=\"req_table\">\n        <tr class=\"header\">\n            <td width=\"20%\">代码</td>\n            <td width=\"80%\">说明</td>\n        </tr>\n        <tr  v-for=\"(code,text) in items\">\n            <td width=\"10%\">{{code}}</td>\n            <td width=\"90%\">{{text}}</td>\n        </tr>\n    </table>\n</div>\n";
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(52)
-	__vue_script__ = __webpack_require__(39)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/view/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(40)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./index.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 37 */,
-/* 38 */,
-/* 39 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = {
-	    name: 'index'
-
-	};
-
-/***/ },
-/* 40 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"index_wrap\">\n    <div class=\"in_wrap\">\n        <h2 class=\"page-header\">打包配置</h2>\n        <p>1.安装nodejs</p>\n        <p>2.执行npm install</p>\n        <p>3.执行npm run build</p>\n        <p>4.打开build文件夹下的index.html</p>\n    </div>\n\n    <div class=\"in_wrap in_wrap2\">\n        <h2 class=\"page-header\">使用手册</h2>\n        <p>1.config／config.code.js 用于书写错误码，按规则填写即可</p>\n        <p>2.config／config.api.js 用于遍历，每个接口对应一个 key->value  比如 userlist：用户列表， 按示范填写即可</p>\n        <p>3.api／api.xx.js 则是接口文档，注意xx对应上一步的 config.api.js中的 key ，需要一致，比如userlist ，这里文件名则为api.userlist.js</p>\n        <p>4.api／api.xx.js参数说明：title：接口地址，name：中文名，methods：请求方式，req：请求参数，res：返回参数</p>\n        <p>5.config／config.main.js 配置文件，参数有：domain：接口域名， public：每个接口公共的参数，如index.php，没有可不填， headers：请求头，没有可不填</p>\n        <p>6.关于js请求跨域解决：1.使用proxy服务器代理，2.接口的header 里 增加Access-Control-Allow-Origin:＊， 3.配置chorme参数实现允许跨域访问</p>\n    </div>\n</div>\n";
-
-/***/ },
-/* 41 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"top_wrap\">\n    <left-view :apiconf=\"apiConf\" :leftshow=\"leftShow\"></left-view>\n    <div class=\"modal\" v-show=\"leftShow\" @click=\"onCloseLeft\"></div>\n    <div class=\"header\">\n        <ul>\n            <li @click=\"onShowApiList\">API列表</li>\n            <li><a v-link=\"{path:'/codelist'}\">错误码列表</a></li>\n            <li ><a v-link=\"{path:'/index'}\">使用手册</a></li>\n        </ul>\n    </div>\n    <router-view :items=\"apiData\" :inputdata=\"inputData\"></router-view>\n</div>\n";
-
-/***/ },
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = {
-	    10001: '未登陆',
-	    10002: '登陆态过期',
-	    10003: '账号被锁定'
-	};
-
-/***/ },
-/* 48 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(49);
+	var content = __webpack_require__(34);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -14385,7 +14290,7 @@
 	}
 
 /***/ },
-/* 49 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -14399,15 +14304,73 @@
 
 
 /***/ },
-/* 50 */,
-/* 51 */,
-/* 52 */
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _configCode = __webpack_require__(30);
+
+	var _configCode2 = _interopRequireDefault(_configCode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	    name: 'codelist',
+	    data: function data() {
+	        return {
+	            items: _configCode2.default
+	        };
+	    }
+	};
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"code_wrap\">\n    <table class=\"req_table\">\n        <tr class=\"header\">\n            <td width=\"20%\">代码</td>\n            <td width=\"80%\">说明</td>\n        </tr>\n        <tr  v-for=\"(code,text) in items\">\n            <td width=\"10%\">{{code}}</td>\n            <td width=\"90%\">{{text}}</td>\n        </tr>\n    </table>\n</div>\n";
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(38)
+	__vue_script__ = __webpack_require__(40)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/view/index.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(41)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./index.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(53);
+	var content = __webpack_require__(39);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -14427,7 +14390,7 @@
 	}
 
 /***/ },
-/* 53 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -14435,10 +14398,36 @@
 
 
 	// module
-	exports.push([module.id, ".in_wrap {\n  width: 80%;\n  overflow: hidden;\n  margin: 0 auto;\n  background: #fff;\n  border-top: 5px solid #2196f3;\n  border-radius: 4px;\n  padding: 25px;\n  margin-bottom: 30px;\n  margin-top: 30px;\n  box-shadow: 0 0 10px #999;\n}\n.in_wrap p {\n  font-size: 16px;\n  line-height: 24px;\n  margin-top: 10px;\n}\n.page-header {\n  font-size: 18px;\n  font-weight: 100;\n  margin: 25px 0 10px;\n}\n.in_wrap2 {\n  border-top: 5px solid #4caf50;\n}\n", ""]);
+	exports.push([module.id, ".in_wrap {\n  width: 80%;\n  overflow: hidden;\n  margin: 0 auto;\n  background: #fff;\n  border-top: 5px solid #2196f3;\n  border-radius: 4px;\n  padding: 25px;\n  margin-bottom: 30px;\n  margin-top: 30px;\n  box-shadow: 0 0 10px #999;\n}\n.in_wrap p {\n  font-size: 16px;\n  line-height: 24px;\n  margin-top: 10px;\n}\n.in_wrap p a {\n  color: #2196f3;\n}\n.page-header {\n  font-size: 18px;\n  font-weight: 100;\n  margin: 25px 0 10px;\n}\n.in_wrap2 {\n  border-top: 5px solid #4caf50;\n}\n", ""]);
 
 	// exports
 
+
+/***/ },
+/* 40 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = {
+	    name: 'index'
+
+	};
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"index_wrap\">\n    <div class=\"in_wrap\">\n        <h2 class=\"page-header\">打包配置</h2>\n        <p>1.安装nodejs</p>\n        <p>2.执行npm install</p>\n        <p>3.执行npm run build</p>\n        <p>4.打开build文件夹下的index.html</p>\n        <p>5.下载地址：<a href=\"https://github.com/ShuangRen/ShuangRen-doc\">https://github.com/ShuangRen/ShuangRen-doc</a></p>\n    </div>\n\n    <div class=\"in_wrap in_wrap2\">\n        <h2 class=\"page-header\">使用手册</h2>\n        <p>1.config／config.code.js 用于书写错误码，按规则填写即可</p>\n        <p>2.config／config.api.js 用于遍历，每个接口对应一个 key->value  比如 userlist：用户列表， 按示范填写即可</p>\n        <p>3.api／api.xx.js 则是接口文档，注意xx对应上一步的 config.api.js中的 key ，需要一致，比如userlist ，这里文件名则为api.userlist.js</p>\n        <p>4.api／api.xx.js参数说明：title：接口地址，name：中文名，methods：请求方式，req：请求参数，res：返回参数</p>\n        <p>5.config／config.main.js 配置文件，参数有：domain：接口域名， public：每个接口公共的参数，如index.php，没有可不填， headers：请求头，没有可不填</p>\n        <p>6.关于js请求跨域解决：1.使用proxy服务器代理，2.接口的header 里 增加Access-Control-Allow-Origin:＊， 3.配置chorme参数实现允许跨域访问</p>\n    </div>\n</div>\n";
+
+/***/ },
+/* 42 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"top_wrap\">\n    <left-view :apiconf=\"apiConf\" :leftshow=\"leftShow\"></left-view>\n    <div class=\"modal\" v-show=\"leftShow\" @click=\"onCloseLeft\"></div>\n    <div class=\"header\">\n        <ul>\n            <li @click=\"onShowApiList\">API列表</li>\n            <li><a v-link=\"{path:'/codelist'}\">错误码列表</a></li>\n            <li ><a v-link=\"{path:'/index'}\">使用手册</a></li>\n        </ul>\n    </div>\n    <router-view :items=\"apiData\" :inputdata=\"inputData\"></router-view>\n</div>\n";
 
 /***/ }
 /******/ ]);

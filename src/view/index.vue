@@ -6,6 +6,7 @@
             <p>2.执行npm install</p>
             <p>3.执行npm run build</p>
             <p>4.打开build文件夹下的index.html</p>
+            <p>5.下载地址：<a href="https://github.com/ShuangRen/ShuangRen-doc">https://github.com/ShuangRen/ShuangRen-doc</a></p>
         </div>
 
         <div class="in_wrap in_wrap2">
@@ -41,6 +42,9 @@ export default {
             font-size:16px;
             line-height:24px;
             margin-top:10px;
+            a {
+                color:#2196f3;
+            }
         }
    }
    .page-header {

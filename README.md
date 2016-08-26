@@ -6,6 +6,7 @@
     <p>2.执行npm install</p>
     <p>3.执行npm run build</p>
     <p>4.打开build文件夹下的index.html</p>
+    <p>4.在线demo：<a href="http://api.webzeal.cn">http://api.webzeal.cn</a></p>
 </div>
 
 <div class="in_wrap in_wrap2">
